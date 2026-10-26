@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:5038
+
+### LINQ: filter + sort
+GET {{baseUrl}}/employees?department=engineering&minSalary=100000
+
+### LINQ: group by department
+GET {{baseUrl}}/employees/by-department
+
+### OOP: cart quote with a promo code
+POST {{baseUrl}}/cart/quote
+Content-Type: application/json
+
+{
+  "promoCode": "SAVE10",
+  "lines": [
+    { "sku": "KB-1", "name": "Keyboard", "unitPrice": 49.99, "quantity": 2 },
+    { "sku": "MS-1", "name": "Mouse", "unitPrice": 19.99, "quantity": 1 }
+  ]
+}
+
+### async: sequential vs Task.WhenAll
+GET {{baseUrl}}/async/users
+
+### CRUD: list
+GET {{baseUrl}}/products
+
+### CRUD: get one
+GET {{baseUrl}}/products/1
+
+### CRUD: create
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{ "name": "Headset", "price": 59.90, "stock": 12 }
+
+### CRUD: update
+PUT {{baseUrl}}/products/1
+Content-Type: application/json
+
+{ "name": "Mechanical Keyboard", "price": 89.00, "stock": 10 }
+
+### CRUD: delete
+DELETE {{baseUrl}}/products/2

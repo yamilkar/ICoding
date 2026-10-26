@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/InterviewAdvanced/InterviewAdvanced.csproj" />
+    <Project Path="src/InterviewBasics/InterviewBasics.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/InterviewAdvanced.Tests/InterviewAdvanced.Tests.csproj" />
+  </Folder>
+</Solution>
